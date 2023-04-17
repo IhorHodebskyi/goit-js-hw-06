@@ -3,13 +3,9 @@ const refs = {
   nemalabel: document.querySelector("#name-output"),
 };
 
-refs.input.addEventListener("input", outputAnanymous);
-
-function outputAnanymous(event) {
-  refs.nemalabel.textContent = event.currentTarget.value
+refs.input.addEventListener("input", (event) => {
+  refs.nemalabel.textContent = event.currentTarget.value;
   if (refs.nemalabel.textContent.length === 0) {
     refs.nemalabel.textContent = "Anonymous";
-   }
-
-}
-
+  }
+});
